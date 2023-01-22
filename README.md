@@ -1,6 +1,6 @@
 # Tetris-Game
 
-###Introduction
+### Introduction
 Welcome to the classic Tetris game built using only HTML, CSS, and JavaScript. The game features the nostalgic original Tetris theme song playing in the background as you play. It offers a challenging and fun experience for players of all skill levels.
 
 ## Gameplay
