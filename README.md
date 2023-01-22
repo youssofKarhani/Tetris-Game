@@ -9,6 +9,9 @@ The game keeps track of your score and the number of lines cleared, as well as t
 ### Difficulty Progression
 As you progress through the game, the difficulty increases after clearing 5 lines. The level increases, and the block fall speed increases, making it harder for the player to keep up. This adds an extra layer of challenge and keeps the game interesting for players who have mastered the basics.
 
+### Flexibility
+The game design is very playful and engaging, but you can always change the game design 
+
 #### *All this while enjoying the nostalgic original tetris theme song in the background. I hope you enjoy playing it as much as I enjoyed creating it.*
 
 
