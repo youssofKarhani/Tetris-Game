@@ -29,7 +29,7 @@ class Game {
             break;
         }
       }
-      if (ticks % updateEvery == 0) {
+      if (ticks % (updateEvery-(levelspeedbump*5)) == 0) {
         ticks = 0;
 
         if (gridPiece == null) {
@@ -58,11 +58,14 @@ class Game {
               //4 and 5 the borders of the canvas
               if (!arrayOfNodes[i][j].is) lineComplete = false;
             }
+            //if a line is complete
             if (lineComplete) {
               currentScore+=50;
               linesCleared++;
-              if(linesCleared%5 == 0) 
+              if(linesCleared%5 == 0) {
                 currentLevel++;
+                levelspeedbump++;
+              }
               for (let i = 4; i < 15; i++) {
                 arrayOfNodes[i][j].is = false;
                 for (let i = 0; i < gridPieces.length; i++) {
@@ -140,7 +143,8 @@ var currentLevel = 1;
 var linesCleared = 0;
 
 var ticks = 0;
-var updateEvery = 50;
+var updateEvery = 40;
+var levelspeedbump = 0;
 var gameOver = false;
 var scoreAdded = false;
 var start = false;
@@ -1312,7 +1316,7 @@ var event = document.addEventListener("keydown", function (e) {
 //listerner for keyup of the down key
 var event = document.addEventListener("keyup", function (e) {
   if (e.keyCode == 40) {
-    updateEvery = 30;
+    updateEvery = 40 - (levelspeedbump*5);
     moveKey = null;
   }
 });
